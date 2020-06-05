@@ -60,6 +60,10 @@ import ImageIO
         }
     }
 
+    // MARK: Public methods
+    
+    public func snapshot() -> UIImage { sceneView.snapshot() }
+    
     // MARK: Private properties
 
     private let radius: CGFloat = 10
