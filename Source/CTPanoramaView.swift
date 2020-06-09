@@ -49,7 +49,7 @@ import ImageIO
     @objc public var panoramaType: CTPanoramaType = .cylindrical {
         didSet {
             createGeometryNode()
-            resetCameraAngles()
+            //resetCameraAngles() //This should either be configurable or not there at all, this prevents showing MJPEG streams correctly
         }
     }
 
