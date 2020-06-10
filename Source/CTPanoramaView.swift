@@ -284,6 +284,8 @@ import ImageIO
             prevLocation = location
 
             reportMovement(CGFloat(-cameraNode.eulerAngles.y), xFov.toRadians())
+        } else if panRec.state == .ended {
+            NotificationCenter.default.post(name: .ctPanoramaViewDidEndPanning360Photo, object: nil)
         }
     }
 
@@ -402,4 +404,8 @@ private extension GLKQuaternion {
             return SCNVector4(x: self.x, y: self.y, z: self.z, w: self.w)
         }
     }
+}
+
+public extension Notification.Name {    
+    static var ctPanoramaViewDidEndPanning360Photo = Notification.Name("ctPanoramaViewDidEndPanning360Photo")
 }
