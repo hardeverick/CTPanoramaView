@@ -63,6 +63,8 @@ import ImageIO
     // MARK: Public methods
     
     public func snapshot() -> UIImage { sceneView.snapshot() }
+
+    public func getYaw() -> Float { cameraNode.eulerAngles.y }
     
     // MARK: Private properties
 
