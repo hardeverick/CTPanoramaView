@@ -246,7 +246,7 @@ import ImageIO
         }
     }
 
-    private func resetCameraAngles() {
+    public func resetCameraAngles() {
         cameraNode.eulerAngles = SCNVector3Make(0, startAngle, 0)
         self.reportMovement(CGFloat(startAngle), xFov.toRadians(), callHandler: false)
     }
